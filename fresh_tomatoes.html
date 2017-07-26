@@ -1,10 +1,4 @@
-import webbrowser
-import os
-import re
 
-
-# Styles and scripting for the page
-main_page_head = '''
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -108,11 +102,7 @@ main_page_head = '''
         });
     </script>
 </head>
-'''
 
-
-# The main page layout and title bar
-main_page_content = '''
   <body>
     <!-- Trailer Video Modal -->
     <div class="modal" id="trailer">
@@ -138,57 +128,55 @@ main_page_content = '''
       </div>
     </div>
     <div class="container">
-      {movie_tiles}
+      
+<div class="col-md-6 col-lg-4 movie-tile" data-trailer-youtube-id="J6eWoTuZfFk" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/4/45/Speed_movie_poster.jpg" width="220" height="342">
+    <h2>Speed</h2>
+    <p>1994</p>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile" data-trailer-youtube-id="Ny_hRfvsmU8" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg" width="220" height="342">
+    <h2>Toy Story</h2>
+    <p>1995</p>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile" data-trailer-youtube-id="6a0-dSMWm5g" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Chak_De%21_India.jpg" width="220" height="342">
+    <h2>Chak de</h2>
+    <p>2007</p>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile" data-trailer-youtube-id="5PSNL1qE6VY" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/b/b0/Avatar-Teaser-Poster.jpg" width="220" height="342">
+    <h2>Avatar</h2>
+    <p>2009</p>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile" data-trailer-youtube-id="FAfR8omt-CY" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Midnight_in_Paris_Poster.jpg" width="220" height="342">
+    <h2>Midnight in Paris</h2>
+    <p>2011</p>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile" data-trailer-youtube-id="L0MK7qz13bU" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/0/05/Frozen_%282013_film%29_poster.jpg" width="220" height="342">
+    <h2>Frozen</h2>
+    <p>2013</p>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile" data-trailer-youtube-id="91ZI3IrojMU" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/9/99/Dangal_Poster.jpg" width="220" height="342">
+    <h2>Dangal</h2>
+    <p>2016</p>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile" data-trailer-youtube-id="eZGFBKpQ3_I" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/The_Jungle_Book_%282016%29.jpg" width="220" height="342">
+    <h2>The Jungle Book</h2>
+    <p>2016</p>
+</div>
+
     </div>
   </body>
 </html>
-'''
-
-
-# A single movie entry html template
-movie_tile_content = '''
-<div class="col-md-6 col-lg-4 movie-tile" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
-    <img src="{poster_image_url}" width="220" height="342">
-    <h2>{movie_title}</h2>
-    <p>{year_released}</p>
-</div>
-'''
-
-
-def create_movie_tiles_content(movies):
-    # The HTML content for this section of the page
-    content = ''
-    for movie in movies:
-        # Extract the youtube ID from the url
-        youtube_id_match = re.search(
-            r'(?<=v=)[^&#]+', movie.trailer_youtube_url)
-        youtube_id_match = youtube_id_match or re.search(
-            r'(?<=be/)[^&#]+', movie.trailer_youtube_url)
-        trailer_youtube_id = (youtube_id_match.group(0) if youtube_id_match
-                              else None)
-
-        # Append the tile for the movie with its content filled in
-        content += movie_tile_content.format(
-            movie_title=movie.title,
-            year_released = movie.year_released,
-            poster_image_url=movie.poster_image_url,
-            trailer_youtube_id=trailer_youtube_id
-        )
-    return content
-
-
-def open_movies_page(movies):
-    # Create or overwrite the output file
-    output_file = open('fresh_tomatoes.html', 'w')
-
-    # Replace the movie tiles placeholder generated content
-    rendered_content = main_page_content.format(
-        movie_tiles=create_movie_tiles_content(movies))
-
-    # Output the file
-    output_file.write(main_page_head + rendered_content)
-    output_file.close()
-
-    # open the output file in the browser (in a new tab, if possible)
-    url = os.path.abspath(output_file.name)
-    webbrowser.open('file://' + url, new=2)
