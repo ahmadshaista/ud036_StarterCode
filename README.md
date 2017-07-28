@@ -10,11 +10,8 @@ To run the Movie Website Trailer project it is required that you install Python 
 
 How to Run Project
 ------------------
-You can launch a terminal window (command prompt for Windows users) and then navigate to the project's directory. From there you can run the command python project_file.py (substituting in the name of your project's file) and that will execute the code within the python file.
-For example at windows command prompt, type the following commands:
-
-                                                                    cd "provide the project path"
-                                                                    python project_file.py
+At windows command prompt navigate to the project's directory.
+Run the python program with the following command "python entertainment_center.py"
 
 
 Extra Credit Description
