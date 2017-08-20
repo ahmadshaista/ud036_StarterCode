@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <!--Using bootstrap grid structure-->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img class="title-logo" src="images/logo_100_100.jpg" alt="Udacity logo">
+        </div>
+        <div class="col-md-6 text-right text-uppercase small-devices">
+          <h1 class="title-super text-thin">Shaista Ahmad</h1>
+          <h4>Full Stack Web Developer</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <hr class="row-height">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <img class="img-responsive" src="images/web-design.jpg" alt="main image">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="text-muted" >Featured Work</h2>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <img class="img-responsive" src="images/movie-trailer.jpg" alt="Movie Trailers" data-toggle="modal" data-target="#movietrailer">
+          <h3 class="text-uppercase">Movie Trailers</h3>
+          <p>https://github.com/ahmadshaista/ud036_StarterCode.git</p>
+        </div>
+        <div class="col-md-4">
+          <img class="img-responsive" src="images/portfolio.jpg" alt="Portfolio" data-toggle="modal" data-target="#portfolio">
+          <h3 class="text-uppercase">Portfolio</h3>
+          <p>https://github.com/ahmadshaista/ud036_StarterCode.git</p>
+        </div>
+        <div class="col-md-4">
+          <img class="img-responsive" src="images/neighborhood.jpg" alt="Neighborhood Map" data-toggle="modal" data-target="#bokeh" >
+          <h3 class="text-uppercase">Neighborhood Map</h3>
+          <p>https://github.com/udacity/Bokeh</p>
+        </div>
+      </div>
+    </div>
+    <!--Adding modals to provide detailed description of projects-->
+    <div class="modal fade" id="movietrailer" tabindex="-1" role="dialog" aria-labelledby="movie-trailer" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content modal-text">
+          <div class="modal-header">
+            <h4 class="modal-title " id="movie-trailer">Movie Trailer Website</h4>
+          </div>
+          <div class="modal-body">
+            <img class="img-responsive" src="images/movie-trailer.jpg" alt="Movie Trailers">
+            <p class="modal-description">
+              The Movie Trailer Website project was part of Programming Foundation with Python course.
+              Movie trailers and their poster images were displayed on the web page.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="portfolio" tabindex="-1" role="dialog" aria-labelledby="portfolio-header" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content modal-text">
+          <div class="modal-header">
+            <h4 class="modal-title " id="portfolio-header">Portfolio Project</h4>
+          </div>
+          <div class="modal-body">
+            <img class="img-responsive" src="images/portfolio.jpg" alt="Portfolio">
+            <p class="modal-description">
+              The Portfolio project was part of HTML and CSS course.
+              A professional portfolio was created.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="bokeh" tabindex="-1" role="dialog" aria-labelledby="neighborhood-map" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content modal-text">
+          <div class="modal-header">
+            <h4 class="modal-title " id="neighborhood-map">Neighborhood Map Project</h4>
+          </div>
+          <div class="modal-body">
+            <img class="img-responsive" src="images/neighborhood.jpg" alt="Neighborhood Map">
+            <p class="modal-description">
+              The Neighborhood Map project is a part of Javascript and AJAX course.
+              We will be developing a map of our neighborhood.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

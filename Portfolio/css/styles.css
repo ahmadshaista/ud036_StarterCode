@@ -1,0 +1,42 @@
+body{
+    font-family: 'Lato', sans-serif;
+    color:#747704;
+    font-weight: 300;
+}
+
+.text-muted{
+    color:#8CBBBB;
+}
+
+.text-thin{
+    font-weight: 100;
+}
+
+.title-super{
+    font-size: 40px;
+}
+
+.title-logo{
+    margin-top: 20px;
+}
+
+.row-height{
+    height: 1px;
+    color: #8CBBBB
+}
+
+.modal-text{
+    color: black;
+}
+
+.modal-description{
+    padding-top: 10px;
+
+}
+
+/*Media query for smaller devices - To left align the name and title of portfolio*/
+@media only screen and (max-device-width: 768px) {
+    .small-devices{
+        text-align: left;
+    }
+}
