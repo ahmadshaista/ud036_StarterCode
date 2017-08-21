@@ -8,8 +8,6 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
   </head>
   <body>
     <!--Using bootstrap grid structure-->
@@ -19,8 +17,10 @@
           <img class="title-logo" src="images/logo_100_100.jpg" alt="Udacity logo">
         </div>
         <div class="col-md-6 text-right text-uppercase small-devices">
-          <h1 class="title-super text-thin">Shaista Ahmad</h1>
-          <h4>Full Stack Web Developer</h4>
+          <header>
+            <h1 class="title-super text-thin">Shaista Ahmad</h1>
+            <h4>Full Stack Web Developer</h4>
+          </header>
         </div>
       </div>
       <div class="row">
@@ -29,9 +29,9 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-12">
+        <section class="col-md-12">
           <img class="img-responsive" src="images/web-design.jpg" alt="main image">
-        </div>
+        </section>
       </div>
       <div class="row">
         <div class="col-md-12">
@@ -42,17 +42,23 @@
         <div class="col-md-4">
           <img class="img-responsive" src="images/movie-trailer.jpg" alt="Movie Trailers" data-toggle="modal" data-target="#movietrailer">
           <h3 class="text-uppercase">Movie Trailers</h3>
-          <p>https://github.com/ahmadshaista/ud036_StarterCode.git</p>
+          <footer>
+            <p>https://github.com/ahmadshaista/ud036_StarterCode.git</p>
+          </footer>
         </div>
         <div class="col-md-4">
           <img class="img-responsive" src="images/portfolio.jpg" alt="Portfolio" data-toggle="modal" data-target="#portfolio">
           <h3 class="text-uppercase">Portfolio</h3>
-          <p>https://github.com/ahmadshaista/ud036_StarterCode.git</p>
+          <footer>
+            <p>https://github.com/ahmadshaista/ud036_StarterCode.git</p>
+          </footer>
         </div>
         <div class="col-md-4">
           <img class="img-responsive" src="images/neighborhood.jpg" alt="Neighborhood Map" data-toggle="modal" data-target="#bokeh" >
           <h3 class="text-uppercase">Neighborhood Map</h3>
-          <p>https://github.com/udacity/Bokeh</p>
+          <footer>
+            <p>https://github.com/udacity/Bokeh</p>
+          </footer>
         </div>
       </div>
     </div>
@@ -114,5 +120,7 @@
         </div>
       </div>
     </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

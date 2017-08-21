@@ -1,42 +1,42 @@
-body{
-    font-family: 'Lato', sans-serif;
-    color:#747704;
+body {
+    font-family: "Lato", sans-serif;
+    color: #747704;
     font-weight: 300;
 }
 
-.text-muted{
-    color:#8CBBBB;
+.text-muted {
+    color: #8cbbbb;
 }
 
-.text-thin{
+.text-thin {
     font-weight: 100;
 }
 
-.title-super{
+.title-super {
     font-size: 40px;
 }
 
-.title-logo{
+.title-logo {
     margin-top: 20px;
 }
 
-.row-height{
+.row-height {
     height: 1px;
-    color: #8CBBBB
+    color: #8cbbbb;
 }
 
-.modal-text{
-    color: black;
+.modal-text {
+    color: #000000;
 }
 
-.modal-description{
+.modal-description {
     padding-top: 10px;
 
 }
 
 /*Media query for smaller devices - To left align the name and title of portfolio*/
 @media only screen and (max-device-width: 768px) {
-    .small-devices{
+    .small-devices {
         text-align: left;
     }
 }
